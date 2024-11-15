@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennis Slot Booking - Surat</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Tennis Slot Booking</div>
+        <nav>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="slots-section">
+            <h2>Available Slots by Area</h2>
+            <div id="slots-container" class="slots-container">
+                <!-- Slots populated by JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slotsContainer = document.getElementById('slots-container');
+
+            const areaSlots = {
+                "Adajan": [
+                    { time: '09:00 - 10:00 AM', available: true },
+                    { time: '10:00 - 11:00 AM', available: false },
+                    { time: '02:00 - 03:00 PM', available: true }
+                ],
+                "Athwa": [
+                    { time: '08:00 - 09:00 AM', available: true },
+                    { time: '12:00 - 01:00 PM', available: false },
+                    { time: '04:00 - 05:00 PM', available: true }
+                ],
+                "Vesu": [
+                    { time: '07:00 - 08:00 AM', available: true },
+                    { time: '11:00 - 12:00 PM', available: true },
+                    { time: '03:00 - 04:00 PM', available: false }
+                ]
+            };
+
+            for (const [area, slots] of Object.entries(areaSlots)) {
+                const areaDiv = document.createElement('div');
+                areaDiv.classList.add('area-section');
+                areaDiv.innerHTML = `<h3>${area}</h3>`;
+
+                slots.forEach(slot => {
+                    const slotDiv = document.createElement('div');
+                    slotDiv.classList.add('slot');
+                    slotDiv.classList.toggle('unavailable', !slot.available);
+                    slotDiv.textContent = `${slot.time} ${slot.available ? '(Available)' : '(Booked)'}`;
+
+                    if (slot.available) {
+                        slotDiv.addEventListener('click', () => {
+                            alert('Please log in to book a slot.');
+                            window.location.href = 'login.html'; // Redirect to the login page
+                        });
+                    }
+
+                    areaDiv.appendChild(slotDiv);
+                });
+
+                slotsContainer.appendChild(areaDiv);
+            }
+        });
+    </script>
+</body>
+</html>

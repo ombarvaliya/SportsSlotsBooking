@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Slot Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">Sports Slot Booking</div>
+        <nav>
+            <ul>
+                <li><a href="./signup.html" class="nav-item">Sign Up</a></li>
+                <li><a href="./login.html" class="nav-item">Login</a></li>
+                <li><a href="#about" class="nav-item">About Us</a></li>
+                <li><a href="#contact" class="nav-item">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to Sports Slot Booking</h1>
+            <p>Book your favorite sports venues effortlessly.</p>
+            <div class="buttons">
+                <button id="bookVenueBtn">Book Venue</button>
+                <button id="getListedBtn">Get Listed</button>
+            </div>
+        </section>
+
+        <section id="sports" class="sports-section">
+            <h2>Available Sports</h2>
+            <input type="text" id="searchBar" placeholder="Search for a sport..." />
+            <div class="sports-list">
+                <!-- Each sport card links to its own page -->
+                <a href="basketball.html" class="sport-card">
+                    <h3>Basketball</h3>
+                </a>
+                <a href="tennis.html" class="sport-card">
+                    <h3>Tennis</h3>
+                </a>
+                <a href="cricket.html" class="sport-card">
+                    <h3>Cricket</h3>
+                </a>
+                <a href="hockey.html" class="sport-card">
+                    <h3>Hockey</h3>
+                </a>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2>About Us</h2>
+            <p>We connect sports lovers with venue owners, ensuring a seamless booking experience for all.</p>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:info@sportsbooking.com">info@sportsbooking.com</a></p>
+        </section>
+    </main>
+
+</body>
+</html>

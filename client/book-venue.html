@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Venue</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Book Your Venue</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="book-venue.html">Book Venue</a>
+            <a href="get-listed.html">Get Listed</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="venue-list">
+            <h2>Available Venues</h2>
+            <input type="text" id="searchBar" placeholder="Search for a sport or venue...">
+            <div id="venues">
+                <!-- Venue items will be dynamically inserted here -->
+                <div class="venue-item" data-sport="Hockey">
+                    <h3>Hockey Arena</h3>
+                    <button class="book-slot-btn">Book Slot</button>
+                </div>
+                <div class="venue-item" data-sport="Basketball">
+                    <h3>Basketball Court</h3>
+                    <button class="book-slot-btn">Book Slot</button>
+                </div>
+                <div class="venue-item" data-sport="Tennis">
+                    <h3>Tennis Court</h3>
+                    <button class="book-slot-btn">Book Slot</button>
+                </div>
+                <div class="venue-item" data-sport="Cricket">
+                    <h3>Cricket Ground</h3>
+                    <button class="book-slot-btn">Book Slot</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sports Slot Booking</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

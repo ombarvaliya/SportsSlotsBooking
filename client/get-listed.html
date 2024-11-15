@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Listed</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>List Your Venue</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about-us.html">About Us</a>
+            <a href="contact-us.html">Contact Us</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="get-listed-form">
+            <h2>Register Your Sports Venue</h2>
+            <form id="venueForm">
+                <label for="venueName">Venue Name:</label>
+                <input type="text" id="venueName" name="venueName" required>
+
+                <label for="venueLocation">Location:</label>
+                <input type="text" id="venueLocation" name="venueLocation" required>
+
+                <label for="sportsType">Sport Type:</label>
+                <select id="sportsType" name="sportsType">
+                    <option value="Football">Football</option>
+                    <option value="Tennis">Tennis</option>
+                    <option value="Cricket">Cricket</option>
+                    <!-- Add more sports as needed -->
+                </select>
+
+                <label for="availability">Availability:</label>
+                <input type="date" id="availability" name="availability" required>
+
+                <button type="submit">Register Venue</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sports Slot Booking</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
